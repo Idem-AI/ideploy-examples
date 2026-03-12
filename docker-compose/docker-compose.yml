@@ -1,0 +1,9 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+  analytics:
+    image: nginx
+    environment:
+      - API_URL=$SERVICE_FQDN_API

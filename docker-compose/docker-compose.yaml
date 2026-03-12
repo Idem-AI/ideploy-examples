@@ -1,0 +1,24 @@
+services:
+  api.test:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        TEST: "${TEST}"
+    ports:
+      - "3000"
+    environment:
+      - FQDN=${SERVICE_FQDN_API}
+      - PORT=3000
+      - DB_CONNECTION=postgres
+      - TEST=${TEST}
+      - TEST_PASSWORD=${SERVICE_PASSWORD_TEST}
+  database-prod:
+    image: postgres:14-alpine
+    environment:
+      - POSTGRES_DB=database
+      - POSTGRES_PASSWORD=password
+  db:
+    image: nginx
+  another-api:
+    image: nginx

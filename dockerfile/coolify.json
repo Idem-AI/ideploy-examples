@@ -1,0 +1,11 @@
+{
+    "name": "Git Based Dockerfile",
+    "build": {
+        "build_pack": "dockerfile"
+    },
+    "network": {
+        "ports": {
+            "expose": "80"
+        }
+    }
+}
