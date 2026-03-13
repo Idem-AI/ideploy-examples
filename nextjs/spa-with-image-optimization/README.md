@@ -1,4 +1,4 @@
-# Coolify Configuration 
+# iDeploy Configuration 
 
 ## Static build (SPA)
 - Set `Build Pack` to `nixpacks`.

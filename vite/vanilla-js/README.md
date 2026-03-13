@@ -1,4 +1,4 @@
-# Coolify Configuration
+# iDeploy Configuration
 
 1. Use `Nixpacks`.
 2. Turn on `Is it a static site?`.

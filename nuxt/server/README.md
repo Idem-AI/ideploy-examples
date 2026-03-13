@@ -1,4 +1,4 @@
-# Coolify Configuration
+# iDeploy Configuration
 
 ## Dockerfile
 
@@ -21,7 +21,7 @@
   CMD ["node", "/app/server/index.mjs"]
 ```
 
-2. Select `Dockerfile` as the `Build Pack` in Coolify.
+2. Select `Dockerfile` as the `Build Pack` in iDeploy.
 3. Set `Ports Exposed` to `3000` (or any port you set).
 4. Set `Dockerfile Location` to the location of your `Dockerfile` (e.g., `/Dockerfile`).
 
@@ -34,7 +34,7 @@
 nixpkgsArchive = '51ad838b03a05b1de6f9f2a0fffecee64a9788ee'
 ```
 
-2. Select `Nixpacks` as the `Build Pack` in Coolify.
+2. Select `Nixpacks` as the `Build Pack` in iDeploy.
 3. Set `Ports Exposed` to `3000` (or any port you set).
 4. Set `Start Command` to `node .output/server/index.mjs`
    - Alternatively, you can set the `start` script inside `package.json` to `node .output/server/index.mjs`. Then Nixpacks will automatically use it as the start command.

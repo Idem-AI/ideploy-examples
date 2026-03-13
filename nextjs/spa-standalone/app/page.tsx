@@ -5,7 +5,7 @@ export default function Home() {
       <h1 className="text-3xl font-bold pb-4">Hello World</h1>
       <p>Analytics ID: {analyticsId}</p>
       <a 
-        href="https://coolify.io"
+        href="https://ideploy.ai"
         target="_blank"
         rel="noopener noreferrer"
         className="bg-blue-500 text-white p-2 rounded-md inline-block"

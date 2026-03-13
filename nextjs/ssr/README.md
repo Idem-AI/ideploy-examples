@@ -1,4 +1,4 @@
-# Coolify Configuration 
+# iDeploy Configuration 
 
 ## Server build (NodeJS)
 - Set `Build Pack` to `nixpacks`.

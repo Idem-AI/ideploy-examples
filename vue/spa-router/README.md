@@ -1,4 +1,4 @@
-# Coolify Configuration
+# iDeploy Configuration
 
 Check [vite.config.ts](./vite.config.ts).
 

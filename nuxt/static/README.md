@@ -1,4 +1,4 @@
-# Coolify Configuration
+# iDeploy Configuration
 
 Check [nuxt.config.js](./nuxt.config.js).
 
@@ -20,7 +20,7 @@ EXPOSE 80
 CMD ["nginx", "-g", "daemon off;"]
 ```
 
-2. Select `Dockerfile` as the `Build Pack` in Coolify.
+2. Select `Dockerfile` as the `Build Pack` in iDeploy.
 3. Set `Ports Exposed` to `80`.
 
 ## Nixpacks
@@ -32,6 +32,6 @@ CMD ["nginx", "-g", "daemon off;"]
 nixpkgsArchive = '51ad838b03a05b1de6f9f2a0fffecee64a9788ee'
 ```
 
-2. Select `Nixpacks` as the `Build Pack` in Coolify.
+2. Select `Nixpacks` as the `Build Pack` in iDeploy.
 3. Turn on `Is it a static site?`.
 4. Set `Publish Directory` to `/.output/public`.

@@ -1,10 +1,10 @@
-# Documentation Détaillée - Coolify Examples Repository
+# Documentation Détaillée - iDeploy Examples Repository
 
 ## 📋 Table des Matières
 
 1. [Vue d'ensemble](#vue-densemble)
 2. [Structure du Repository](#structure-du-repository)
-3. [Configuration Coolify](#configuration-coolify)
+3. [Configuration iDeploy](#configuration-ideploy)
 4. [Applications Supportées](#applications-supportées)
 5. [Guide par Framework](#guide-par-framework)
 6. [Docker et Containerization](#docker-et-containerization)
@@ -16,13 +16,13 @@
 
 ## 🎯 Vue d'Ensemble
 
-**ideploy-examples** est un repository officiel de **Coolify** contenant une collection d'exemples et de templates pour déployer diverses applications et services en utilisant la plateforme Coolify.
+**ideploy-examples** est un repository officiel d'**iDeploy** contenant une collection d'exemples et de templates pour déployer diverses applications et services en utilisant la plateforme iDeploy.
 
 ### Objectif Principal
-Fournir des exemples fonctionnels et prêts à déployer pour les développeurs souhaitant tester ou intégrer leurs applications avec Coolify.
+Fournir des exemples fonctionnels et prêts à déployer pour les développeurs souhaitant tester ou intégrer leurs applications avec iDeploy.
 
 ### Technologie de Base
-- **Coolify** : Plateforme open-source de déploiement et d'orchestration
+- **iDeploy** : Plateforme open-source de déploiement et d'orchestration
 - **Docker** : Containerization des applications
 - **Nixpacks** : Alternative à Dockerfile pour le build
 - **Docker Compose** : Orchestration multi-conteneurs
@@ -33,7 +33,7 @@ Fournir des exemples fonctionnels et prêts à déployer pour les développeurs 
 
 ```
 ideploy-examples/
-├── coolify.json                    # Configuration Coolify racine
+├── ideploy.json                    # Configuration iDeploy racine
 ├── README.md                       # Readme principal
 ├── LICENSE                         # Licence du projet
 │
@@ -108,7 +108,7 @@ ideploy-examples/
 │      └── empty/
 │
 ├── dockerfile/                     # Exemples avancés Docker
-│ ├── coolify.json
+│ ├── ideploy.json
 │ ├── Dockerfile
 │ ├── apps/
 │ └── packages/
@@ -119,9 +119,9 @@ ideploy-examples/
 
 ---
 
-## ⚙️ Configuration Coolify
+## ⚙️ Configuration iDeploy
 
-### Fichier `coolify.json` - Structure Complète
+### Fichier `ideploy.json` - Structure Complète
 
 ```json
 {
@@ -149,7 +149,7 @@ ideploy-examples/
 
 | Paramètre | Type | Description |
 |-----------|------|-------------|
-| `version` | string | Version du format coolify.json |
+| `version` | string | Version du format ideploy.json |
 | `name` | string | Nom de l'application |
 | `build.type` | string | Type de build : `nixpacks` ou `dockerfile` |
 | `build.install_command` | string | Commande pour installer les dépendances |
@@ -333,7 +333,7 @@ nodejs/
 ├── index.js              # Point d'entrée
 ├── package.json          # Dépendances
 ├── README.md
-└── coolify.json         # Configuration Coolify
+└── ideploy.json         # Configuration iDeploy
 ```
 
 **Configuration** :
@@ -538,7 +538,7 @@ Exemples avancés de Dockerfiles :
 ```
 dockerfile/
 ├── Dockerfile          # Dockerfile principal
-├── coolify.json       # Configuration Coolify
+├── ideploy.json       # Configuration iDeploy
 ├── apps/              # Applications multi-conteneurs
 └── packages/          # Packages/modules
 ```
@@ -552,7 +552,7 @@ dockerfile/
 ```
 1. Code Push (Git)
     ↓
-2. Coolify détecte changement
+2. iDeploy détecte changement
     ↓
 3. Build (Nixpacks ou Dockerfile)
     ↓
@@ -569,7 +569,7 @@ dockerfile/
 
 ### Configuration Minimale pour Déployer
 
-#### Étape 1 : coolify.json
+#### Étape 1 : ideploy.json
 
 ```json
 {
@@ -607,7 +607,7 @@ dockerfile/
 
 ### Health Checks
 
-Coolify effectue des vérifications de santé :
+iDeploy effectue des vérifications de santé :
 - HTTP requests sur les ports exposés
 - Vérification de la réponse 200 OK
 - Timeout configurable
@@ -616,7 +616,7 @@ Coolify effectue des vérifications de santé :
 
 ## 🔐 Variables d'Environnement
 
-### Configuration dans coolify.json
+### Configuration dans ideploy.json
 
 ```json
 {
@@ -641,7 +641,7 @@ Coolify effectue des vérifications de santé :
 }
 ```
 
-### Variables Spéciales de Coolify
+### Variables Spéciales d'iDeploy
 
 | Variable | Type | Description |
 |----------|------|-------------|
@@ -680,9 +680,9 @@ $secret = env('APP_SECRET');
 1. Copier `nodejs/` comme base
 2. Modifier `index.js` avec votre logique
 3. Ajouter dépendances à `package.json`
-4. Configurer `coolify.json`
+4. Configurer `ideploy.json`
 5. Push vers Git
-6. Coolify détecte et déploie
+6. iDeploy détecte et déploie
 
 ### 2. Déployer un Full-Stack Next.js
 
@@ -690,7 +690,7 @@ $secret = env('APP_SECRET');
 2. Créer pages dans `pages/`
 3. Ajouter Prisma si base de données
 4. Configurer variables d'environnement
-5. Déployer via Coolify
+5. Déployer via iDeploy
 
 ### 3. Déployer une API Laravel
 
@@ -705,7 +705,7 @@ $secret = env('APP_SECRET');
 1. Utiliser `docker-compose/` comme base
 2. Configurer services dans `docker-compose.yaml`
 3. Définir volumes et networks
-4. Coolify exécute `docker-compose up`
+4. iDeploy exécute `docker-compose up`
 5. Services accessible via domaines
 
 ---
@@ -834,7 +834,7 @@ docker-compose down
 
 | Terme | Explication |
 |-------|-------------|
-| **Coolify** | Plateforme de déploiement open-source |
+| **iDeploy** | Plateforme de déploiement open-source |
 | **Nixpacks** | Build system qui détecte framework automatiquement |
 | **Docker** | Containerization technology |
 | **Docker Compose** | Orchestration multi-conteneurs |
@@ -852,7 +852,7 @@ docker-compose down
 ## 📚 Ressources Supplémentaires
 
 ### Documentation Officielle
-- [Coolify Docs](https://coolify.io/docs)
+- [iDeploy Docs](https://ideploy.ai/docs)
 - [Nixpacks Docs](https://nixpacks.com)
 - [Docker Docs](https://docs.docker.com)
 
@@ -874,7 +874,7 @@ docker-compose down
 ### Ajouter un Nouvel Exemple
 
 1. **Créer un dossier** : `mkdir my-framework`
-2. **Ajouter coolify.json** :
+2. **Ajouter ideploy.json** :
 ```json
 {
   "version": "1.0",
@@ -886,17 +886,17 @@ docker-compose down
 ```
 
 3. **Ajouter README.md** avec instructions
-4. **Tester localement** avec Coolify
+4. **Tester localement** avec iDeploy
 5. **Créer Pull Request**
 
 ### Standards
 
 - ✅ Chaque exemple doit fonctionner indépendamment
 - ✅ Inclure un `README.md` explicatif
-- ✅ Inclure `coolify.json` valide
+- ✅ Inclure `ideploy.json` valide
 - ✅ Exclure `node_modules`, `vendor`, etc. (.gitignore)
 - ✅ Utiliser les meilleures pratiques du framework
-- ✅ Tester sur une instance Coolify
+- ✅ Tester sur une instance iDeploy
 
 ---
 
@@ -908,5 +908,5 @@ Voir le fichier [LICENSE](./LICENSE) dans le repository.
 
 **Dernière mise à jour** : Janvier 2026  
 **Version** : 1.0  
-**Repository** : [ideploy-examples](https://github.com/coollabs/ideploy-examples)
+**Repository** : [ideploy-examples](https://github.com/Idem-AI/ideploy-examples)
 

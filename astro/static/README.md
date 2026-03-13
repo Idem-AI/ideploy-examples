@@ -1,4 +1,4 @@
-# Coolify Configuration
+# iDeploy Configuration
 
 Check [astro.config.mjs](./astro.config.mjs).
 
